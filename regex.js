@@ -77,6 +77,18 @@ let thisOrThat = /(t|T)[a-z]/g;
 
 let multipleCharsFromGroup = /(o|c|d){2,3}/g; // 'ooo', 'co'
 
-let testing = str.match(multipleCharsFromGroup);
+// match the begining of the line
+
+let beginingOfLine = /^This/g;
+
+// end of line
+
+let endOfLine = /21a$/g;
+
+// COMPLEX STUFF
+
+// look ahead
+
+let testing = str.match(endOfLine);
 
 testing;
