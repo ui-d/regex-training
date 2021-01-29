@@ -125,6 +125,7 @@ let solution2 = /123/;
 
 // Match	cat.
 // Match	?=+.
+
 // Skip	abc1
 
 let solution3 = /cat|896|\?=\+/;
@@ -141,6 +142,7 @@ let solution4 = /[cmf]an/;
 
 // Match	hog
 // Match	dog
+
 // Skip	bog
 
 let solution5 = /[d-h]og/;
@@ -150,6 +152,7 @@ let solution5 = /[d-h]og/;
 // Match	Ana
 // Match	Bob
 // Match	Cpc
+
 // Skip	aax
 // Skip	bby
 // Skip	ccz
@@ -160,6 +163,7 @@ let solution6 = /[a-pA-P]{3}/;
 
 // Match	wazzzzzup
 // Match	wazzzup
+
 // Skip	wazup
 
 let solution7 = /waz{2,}up/;
@@ -169,6 +173,7 @@ let solution7 = /waz{2,}up/;
 // Match	aaaabcc
 // Match	aabbbbc
 // Match	aacc
+
 // Skip	a
 
 let solution8 = /a+(b+)?c+/;
@@ -178,6 +183,7 @@ let solution8 = /a+(b+)?c+/;
 // Match	1 file found?
 // Match	2 files found?
 // Match	24 files found?
+
 // Skip	No files found.
 
 let solution9 = /\d+\sfiles?\sfound\?/;
@@ -187,6 +193,52 @@ let solution9 = /\d+\sfiles?\sfound\?/;
 // Match	1.
 // Match	2.
 // Match	3.
+
 // Skip	4.abc
 
 let solution10 = /[1-3].\s+abc/;
+
+// Exercise 10: Matching Lines
+
+// Match	Mission
+
+// Skip	Last Mission
+// Skip	Next Mission
+
+let solution11 = /^Mission/;
+
+// Exercise 11: Matching Groups
+// Task	Text	                      Capture Groups
+// file_record_transcript.pdf	      file_record_transcript
+// file_07241999.pdf	              file_07241999
+
+// Skip	test file_fake.pdf.tmp
+
+let solution12 = /(file_record_transcript)|(file_07241999)\.pdf/;
+
+// Exercise 12: Matching Nested Groups
+// Task	Text	Capture Groups
+// Jan 1987	  Jan 1987 1987
+// May 1969	  May 1969 1969
+// Aug 2011	  Aug 2011 2011
+
+let solution13 = /((Jan|May|Aug)\s(1987|1969|2011))/;
+
+// Exercise 13: Matching Nested Groups
+
+// Task Text	    Capture Groups
+// 1280x720	    1280 720
+// 1920x1600	    1920 1600
+// 1024x768	    1024 768
+
+let solution14 = /(\d+)x(\d+)/;
+
+// Exercise 14: Matching Conditional Text
+
+// Match	I love cats
+// Match	I love dogs
+
+// Skip	I love logs
+// Skip	I love cogs
+
+let solution15 = /I love (cats|dogs)/;
