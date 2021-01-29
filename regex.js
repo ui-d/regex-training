@@ -1,6 +1,6 @@
 // matching
 
-let str = "This is testing ooof this conteentt.m 21a";
+let str = "This is testing ooof this 21. conteentt.m 21a";
 
 let exp = /this/gi;
 
@@ -87,8 +87,20 @@ let endOfLine = /21a$/g;
 
 // COMPLEX STUFF
 
+// look behind (find something, followed by something)
+
+let followedBySpace = /(?<=i)s/g; // every s followed by i
+
+// oposite look behind
+
+let NOTfollowedBySpace = /(?<!i)s/g;
+
 // look ahead
 
-let testing = str.match(endOfLine);
+let anyTwithHISafterIT = /t|T(?=his)/g; // T t t t t t t (any t with his after it)
+
+let testing = str.match(anyTwithHISafterIT);
 
 testing;
+
+// EXERCISES
