@@ -104,3 +104,43 @@ let testing = str.match(anyTwithHISafterIT);
 testing;
 
 // EXERCISES
+
+// Exercise 1: Matching Characters
+// Task	Text
+// Match	abcdefg
+// Match	abcde
+// Match	abc
+
+let solution = /[a-g]{1,7}/;
+
+// Exercise 1½: Matching Digits
+
+// Match	abc123xyz
+// Match	define "123"
+// Match	var g = 123;
+
+let solution2 = /123/;
+
+// Exercise 2: Matching With Wildcards
+
+// Match	cat.
+// Match	?=+.
+// Skip	abc1
+
+let solution3 = /cat|896|\?=\+/;
+
+// Exercise 3: Matching Characters
+
+// Match	can
+// Match	man
+// Match	fan
+
+let solution4 = /[cmf]an/;
+
+// Exercise 4: Excluding Characters
+
+// Match	hog
+// Match	dog
+// Skip	bog
+
+let solution5 = /[d-h]og/;
