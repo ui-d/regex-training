@@ -144,3 +144,49 @@ let solution4 = /[cmf]an/;
 // Skip	bog
 
 let solution5 = /[d-h]og/;
+
+// Exercise 5: Matching Character Ranges
+
+// Match	Ana
+// Match	Bob
+// Match	Cpc
+// Skip	aax
+// Skip	bby
+// Skip	ccz
+
+let solution6 = /[a-pA-P]{3}/;
+
+// Exercise 6: Matching Repeated Characters
+
+// Match	wazzzzzup
+// Match	wazzzup
+// Skip	wazup
+
+let solution7 = /waz{2,}up/;
+
+// Exercise 7: Matching Repeated Characters
+
+// Match	aaaabcc
+// Match	aabbbbc
+// Match	aacc
+// Skip	a
+
+let solution8 = /a+(b+)?c+/;
+
+// Exercise 8: Matching Optional Characters
+
+// Match	1 file found?
+// Match	2 files found?
+// Match	24 files found?
+// Skip	No files found.
+
+let solution9 = /\d+\sfiles?\sfound\?/;
+
+// Exercise 9: Matching Whitespaces
+
+// Match	1.
+// Match	2.
+// Match	3.
+// Skip	4.abc
+
+let solution10 = /[1-3].\s+abc/;
