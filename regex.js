@@ -248,14 +248,23 @@ let solution15 = /I love (cats|dogs)/;
 // ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
 let pin1 = "3434";
-let pin2 = "2224";
+let pin2 = "222434";
 
 function validatePIN(pin) {
   let regex = /^\d{4}$|^\d{6}$/;
 
-  let test = pin.match(regex);
-
-  console.log(test);
+  return !!pin.match(regex);
 }
 
-let a = validatePIN(pin2);
+validatePIN(pin2); /*?*/
+
+const regex_contains_all = (str) =>
+  new RegExp(
+    str
+      .split("")
+      .map((c) => `(?=.*${c})`)
+      .join("")
+  );
+
+const abc = "ab";
+const re = regex_contains_all(abc);
