@@ -242,3 +242,20 @@ let solution14 = /(\d+)x(\d+)/;
 // Skip	I love cogs
 
 let solution15 = /I love (cats|dogs)/;
+
+// CODEWARS
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+let pin1 = "3434";
+let pin2 = "2224";
+
+function validatePIN(pin) {
+  let regex = /^\d{4}$|^\d{6}$/;
+
+  let test = pin.match(regex);
+
+  console.log(test);
+}
+
+let a = validatePIN(pin2);
